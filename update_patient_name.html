@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>Update Your Email</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <br>
+
+        <form action="{{ 'http://127.0.0.1/update_patient_name_success' }}" method="POST" role="form">
+            <div class="form-group">
+                <br>
+                <label for="name_of_user">Enter your name:</label>
+                <input type="text" class="form-control" id="name_of_user" name="name_of_user" placeholder="Elon Musk" required autocomplete="off">
+                <br>
+
+            </div>
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+
+        <br>
+    </div>
+    <br>
+
+</body>
+
+</html>

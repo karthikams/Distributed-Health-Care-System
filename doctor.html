@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>Doctor Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h3>Hello doctor {{ name }}</h3>
+        <br>
+        <p> Please select any of the options below </p>
+        <br>
+        <br>
+
+        <form action="{{ 'http://127.0.0.1/cancel_appointment_doctor' }}" method="POST" role="form">
+            <button type="submit" class="btn btn-success">Cancel Appointment</button>
+        </form>
+        <br>
+        <br>
+        <form action="{{ 'http://127.0.0.1/uploadFile' }}" method="POST" role="form">
+            <button type="submit" class="btn btn-success">Upload scan report</button>
+        </form>
+        <br>
+        <br>
+    </div>
+    <br>
+</body>
+
+</html>

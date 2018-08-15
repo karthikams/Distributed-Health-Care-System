@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+	<title>Patient Page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h3>Hello {{ result[1] }}</h3>
+		<br>
+		<br>
+		<p> Please select any of the options below </p>
+		<br>
+		<br>
+
+		<form action="{{ 'http://127.0.0.1/update_patient_info' }}" method="POST" role="form">
+			<button type="submit" class="btn btn-success">Update my information</button>
+		</form>
+		<br>
+		<br>
+		<form action="http://127.0.0.1/book_appointment" method="POST" role="form">
+			<button type="submit" class="btn btn-success">Book Appointment</button>
+		</form>
+		<br>
+		<br>
+		<form action="http://127.0.0.1/cancel_appointment" method="POST" role="form">
+			<button type="submit" class="btn btn-success">Cancel Appointment</button>
+		</form>
+		<br>
+		<br>
+		<form action="http://127.0.0.1/view_appointment" method="POST" role="form">
+			<button type="submit" class="btn btn-success">View my Appointments</button>
+		</form>
+		<br>
+		<br>
+		<form action="http://127.0.0.1/scan_report" method="POST" role="form">
+			<button type="submit" class="btn btn-success">Get Scan report</button>
+		</form>
+		<br>
+	</div>
+	<br>
+
+</body>
+
+</html>

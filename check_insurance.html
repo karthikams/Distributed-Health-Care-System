@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>Insurance Company</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <form action="{{ 'http://127.0.0.1/check_insurance_result' }}" method="POST" role="form">
+            <div class="form-group">
+                <br>
+                <br>
+                <label for="insurance_comp_name">Enter your company name:</label>
+                <input type="text" class="form-control" id="insurance_comp_name" name="insurance_comp_name" placeholder="WellsFargo" required>
+            </div>
+            <button type="submit" class="btn btn-success">Enter to check your customers</button>
+        </form>
+
+        <br>
+    </div>
+    <br>
+
+</body>
+
+</html>

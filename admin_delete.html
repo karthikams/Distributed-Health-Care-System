@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>Appointment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <h1>Select the account you want to delete</h1>
+        <form action="{{ 'http://127.0.0.1/admin_delete_success' }}" method="POST" role="form">
+            <div class="form-group">
+                <br>
+                <select name="selecteduser" id="selecteduser" class="form-control">
+  		{% for row in result %}
+		<option value="{{row[0]}}">{{ row[1] }}</option>  
+  		{% endfor %}
+  		</select>
+
+            </div>
+            <button type="submit" class="btn btn-success">Delete this account</button>
+        </form>
+
+        <br>
+    </div>
+    <br>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <h1>Welcome to the Official Hospital website</h1>
+        <form action="{{ 'http://127.0.0.1/result' }}" method="POST" role="form">
+            <div class="form-group">
+                <label for="uname">Username:</label>
+                <input type="text" class="form-control" id="uname" name="uname" placeholder="What's your health ID?">
+                <br>
+                <label for="psw">Password:</label>
+                <input type="password" class="form-control" id="psw" name="psw" placeholder="Enter a password.">
+
+
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+
+        <br>
+    </div>
+    <br>
+
+</body>
+
+</html>

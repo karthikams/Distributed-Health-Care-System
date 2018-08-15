@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>Appointment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <h1>Select your appointment date</h1>
+        <form action="{{ 'http://127.0.0.1/book_appointment_success' }}" method="POST" role="form">
+            <div class="form-group">
+                <label for="appointment_date">Enter the date:</label>
+                <input type="text" class="form-control" name="appointment_date" required placeholder="06/15/2018">
+                <br>
+                <label for="appointment_time">Enter the time:</label>
+                <input type="text" class="form-control" name="appointment_time" required placeholder="11:00">
+                <br>
+                <p> Select your doctor </p>
+                <select name="d_id" class="form-control">
+  		{% for row in result %}
+		<option value="{{row[0]}}">{{ row[1] }}</option>  
+  		{% endfor %}
+  		</select>
+                <br>
+            </div>
+            <button type="submit" class="btn btn-success">Book my appointment</button>
+        </form>
+
+        <br>
+    </div>
+
+</body>
+
+</html>

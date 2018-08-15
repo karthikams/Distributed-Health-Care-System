@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Your appointments</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="container">
+		<h2>This is your appointment.</h2>
+
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Doctor</th>
+						<th>Appointment</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						{% for row in result %}
+						<td>{{ row[1] }}</td>
+						<td>{{ row[7] }}</td>
+						<td>{{ row[4] }}</td>
+						{% endfor %}
+					</tr>
+				</tbody>
+
+
+			</table>
+
+		</div>
+		<br>
+	</div>
+</body>
+
+</html>
